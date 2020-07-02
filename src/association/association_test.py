@@ -630,6 +630,7 @@ class AssociationTest():
         fncount = 0  # false negatives (associations that were missed or rejected)
         run_object_details = []
         valid_gt_frames = self.gt_df.loc[self.gt_df['is_valid']]['det_frame'].unique()
+	#print("*elements in frame",len(valid_gt_frames)
         for frame_num in valid_gt_frames:
             ncount, ntp, nfp, nfn, frame_object_details = self.evaluate_frame_association_accuracy(cam, frame_num, isFiltered,use_detector,weights,data_type)
             count += ncount
