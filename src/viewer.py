@@ -5,6 +5,8 @@ import matplotlib
 import os
 import pandas as pd
 import math
+import sys
+sys.path.append('/home/rob/PycharmProjects/viewer/viewer')
 
 # Custom Libraries
 from src.gui_form.data_viewer import MyFrame_Data_Viewer
@@ -897,7 +899,7 @@ class MyFrame(Frame):
         self.TopLevelParent.Refresh()
         return
 
-    def process_choose_run_date( self, event ):
+    def  process_choose_run_date( self, event ):
         '''dropdown is changed'''
         self.run_date_idx = event.Selection
         self.run_date = self.run_dates[self.run_date_idx]

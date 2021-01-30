@@ -423,7 +423,7 @@ class AssociationTest():
         7) Return the assignments, the total_costs and the component_costs to the calling function
 
         '''
-
+        # import pdb; pdb.set_trace()
         tr = Transform(parent_data=self.parent_data, data_type=data_type)
 
         max_cost_assignments = []
@@ -630,7 +630,7 @@ class AssociationTest():
         fncount = 0  # false negatives (associations that were missed or rejected)
         run_object_details = []
         valid_gt_frames = self.gt_df.loc[self.gt_df['is_valid']]['det_frame'].unique()
-	#print("*elements in frame",len(valid_gt_frames)
+        print("*elements in frame",len(valid_gt_frames))
         for frame_num in valid_gt_frames:
             ncount, ntp, nfp, nfn, frame_object_details = self.evaluate_frame_association_accuracy(cam, frame_num, isFiltered,use_detector,weights,data_type)
             count += ncount
@@ -638,10 +638,11 @@ class AssociationTest():
             fpcount += nfp
             fncount += nfn
             run_object_details.extend(frame_object_details)
+        #return count, tpcount, fpcount, fncount, [0,0,0], run_object_details
 
-        accy = tpcount / count
-        precision = tpcount / (tpcount + fpcount)
-        recall = tpcount / (tpcount + fncount)
+        accy = tpcount / (count + 1e-6)
+        precision = tpcount / (tpcount + fpcount + 1e-6)
+        recall = tpcount / (tpcount + fncount + 1e-6)
         run_stats = [accy, precision, recall]
         return count, tpcount, fpcount, fncount, run_stats, run_object_details
 
