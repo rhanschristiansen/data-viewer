@@ -6,7 +6,7 @@ import os
 import pandas as pd
 import math
 import sys
-sys.path.append('/home/rob/PycharmProjects/viewer/viewer')
+sys.path.append('/home/rob/PycharmProjects/viewer')
 
 # Custom Libraries
 from src.gui_form.data_viewer import MyFrame_Data_Viewer
@@ -224,7 +224,7 @@ class MyFrame(Frame):
         self.run_number_idx = 0
 
         # TODO - add functionality to automatically scan the files and build the dataset (low priority)
-        self.data_dir = '../../data/'
+        self.data_dir = '../data/'
         self.run_dates = ['2011_09_26', '2018-09-18', '2018-09-20', '2018-12-17']
         self.run_numbers = {
             #'2011_09_26':['0001','0002','0005','0009','0015'],
