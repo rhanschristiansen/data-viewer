@@ -11,3 +11,5 @@ scikit-learn
 scikit-image
 scipy
 keras
+pykitti
+munkres

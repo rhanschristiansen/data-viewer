@@ -3,6 +3,13 @@ Video Lidar Viewer
 
 This viewer allows the user to view video and lidar data in an interactive GUI based system
 
+## Install dependencies
+1. `wxPython4`: Manually install pip wheel for ubuntu 18.04 (replace with 16.04 if needed)
+   ```bash
+   pip install -U \
+    -f https://extras.wxpython.org/wxPython4/extras/linux/gtk3/ubuntu-18.04 \
+    wxPython
+   ```
 ## Running the Viewer
 ### Download data
 TODO: data not in cloud storage yet, update when available.  
