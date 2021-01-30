@@ -43,3 +43,6 @@ TODO: data not in cloud storage yet, update when available.
     ```bash
     python3 viewer.py
     ```
+
+## Generating Bounding Boxes for Kitti and Santa Clara datasets
+See [src/util/preprocess_santaclara.py](src/util/preprocess_santaclara.py) and [src/util/preprocess_kitti.py](src/util/preprocess_kitti.py)
