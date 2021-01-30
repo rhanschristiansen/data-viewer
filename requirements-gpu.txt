@@ -11,4 +11,3 @@ scikit-learn
 scikit-image
 scipy
 keras
-

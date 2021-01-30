@@ -4,6 +4,8 @@ Video Lidar Viewer
 This viewer allows the user to view video and lidar data in an interactive GUI based system
 
 ## Running the Viewer
+### Download data
+TODO: data not in cloud storage yet, update when available.  
 ### Running in PyCharm
 1. Navigate to [src/viewer.py](src/viewer.py)  
 1. Click on Play button  
